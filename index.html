@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Proyecto Final · Empresas Simuladas — Tec. Univ. en CxE & Marketing Digital</title>
+<meta name="description" content="Cuadro sinóptico, gráfico y materiales del Proyecto Final/Prácticas Situadas basado en Empresas Simuladas." />
+<link rel="icon" href="data:,">
+<style>
+  /* Apple-like minimal design: airy spacing, large type, soft gradients, SF system font */
+  :root{
+    --bg:#fbfbfd;
+    --txt:#111114;
+    --muted:#6e6e73;
+    --brand:#0071e3;   /* Apple blue-ish */
+    --surface:#ffffff;
+    --border:#e5e5ea;
+    --shadow: 0 10px 30px rgba(17,17,20,.06);
+    --radius:18px;
+    --radius-sm:12px;
+    --maxw:1080px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b0b0f;
+      --txt:#f5f5f7;
+      --muted:#a1a1a6;
+      --surface:#161617;
+      --border:#2c2c2e;
+      --shadow: 0 16px 48px rgba(0,0,0,.35);
+    }
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", "Apple Color Emoji","Segoe UI Emoji";
+    color:var(--txt);
+    background:
+      radial-gradient(1200px 500px at 20% -10%, rgba(0,113,227,.08), transparent 60%),
+      radial-gradient(900px 400px at 120% 0%, rgba(0,113,227,.06), transparent 55%),
+      var(--bg);
+  }
+  a{color:var(--brand); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .container{max-width:var(--maxw); margin:0 auto; padding:24px}
+  .hero{
+    margin: 24px auto;
+    padding: 32px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .lead{color:var(--muted); max-width:70ch}
+  h1{
+    font-size: clamp(1.6rem, 2.4vw + .8rem, 2.6rem);
+    letter-spacing:-.015em; margin:.3rem 0 .6rem
+  }
+  h2{font-size: clamp(1.25rem, 1.4vw + .8rem, 1.6rem); margin:0 0 .6rem}
+  .cta{
+    display:flex; gap:12px; flex-wrap:wrap; margin:14px 0 0;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:.55rem;
+    padding:.72rem 1rem; border-radius:999px; border:1px solid var(--border);
+    background: linear-gradient(180deg, #f5f5f7, #e9e9ee);
+    color:#111114; font-weight:600; box-shadow:inset 0 1px 0 rgba(255,255,255,.6);
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn.primary{
+    background: linear-gradient(180deg, #2ea0ff, #0071e3);
+    color:white; border: none;
+  }
+  .grid{display:grid; gap:16px}
+  .synopsis details{
+    background: var(--surface);
+    border:1px solid var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    overflow:hidden;
+  }
+  .synopsis summary{
+    list-style:none; cursor:pointer; padding:16px 18px; font-weight:700; position:relative
+  }
+  .synopsis summary::-webkit-details-marker{display:none}
+  .panel{padding:0 18px 18px}
+  .muted{color:var(--muted)}
+  .cards{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:16px; box-shadow:var(--shadow)}
+  .chip{display:inline-flex; align-items:center; padding:.2rem .6rem; border-radius:999px; background:#f2f2f7; border:1px solid var(--border)}
+  @media (prefers-color-scheme: dark){ .chip{ background:#1c1c1e } }
+  footer{margin:26px auto; padding:18px; color:var(--muted); text-align:center}
+  :focus-visible{outline:3px solid var(--brand); outline-offset:2px; border-radius:8px}
+  /* SVG diagram card */
+  .diagram{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:16px}
+  .diagram h2{margin-bottom:.25rem}
+</style>
+</head>
+<body>
+<header class="container hero" role="banner">
+  <h1>Empresas Simuladas para E‑Commerce y Marketing Digital</h1>
+  <p class="lead">
+    Landing de referencia para el tramo de egreso (16 semanas). Incluye un <strong>cuadro sinóptico</strong>,
+    un <strong>gráfico síntesis</strong> y <strong>materiales descargables</strong>.
+  </p>
+  <div class="cta" role="group" aria-label="Acciones">
+    <a class="btn primary" href="materials/propuesta-proyecto-final.md" download>⬇️ Descargar propuesta (MD)</a>
+    <a class="btn" href="materials/propuesta-proyecto-final.docx" download>DOCX</a>
+    <a class="btn" href="materials/propuesta-proyecto-final.pdf" download>PDF</a>
+    <a class="btn" href="#descargas">Ver materiales</a>
+    <a class="btn" href="#grafico">Ver gráfico</a>
+  </div>
+</header>
+
+<main id="content" class="container" role="main">
+  <section aria-labelledby="grafico" class="diagram">
+    <h2 id="grafico">Gráfico síntesis: 4 fases, una operación integrada</h2>
+    <p class="muted">Visual de alto nivel del proyecto: objetivos, fases e indicadores clave (Apple‑like, minimalista).</p>
+    <!-- Inline SVG timeline diagram -->
+    <svg viewBox="0 0 1200 360" role="img" aria-labelledby="ttl desc" style="width:100%; height:auto">
+      <title id="ttl">Síntesis visual del Proyecto Final por fases</title>
+      <desc id="desc">Cuatro fases: Arranque, Operación, Escalamiento y Cierre, con entregables y KPIs.</desc>
+      <defs>
+        <linearGradient id="g1" x1="0" x2="1">
+          <stop offset="0%" stop-color="#2ea0ff"/>
+          <stop offset="100%" stop-color="#0071e3"/>
+        </linearGradient>
+        <filter id="sh" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="6" stdDeviation="6" flood-opacity="0.15"/>
+        </filter>
+      </defs>
+      <!-- Axis -->
+      <line x1="60" y1="180" x2="1140" y2="180" stroke="#c7c7cc" stroke-width="2" />
+      <!-- Phase nodes -->
+      <!-- 1 -->
+      <circle cx="180" cy="180" r="12" fill="url(#g1)" filter="url(#sh)"/>
+      <text x="180" y="120" text-anchor="middle" font-size="16" font-weight="700">Fase 1</text>
+      <text x="180" y="140" text-anchor="middle" font-size="13" fill="#6e6e73">Arranque</text>
+      <rect x="110" y="200" width="140" height="90" rx="12" fill="#fff" stroke="#e5e5ea" filter="url(#sh)"/>
+      <text x="180" y="226" text-anchor="middle" font-size="12">Inducción · Roles</text>
+      <text x="180" y="244" text-anchor="middle" font-size="12">Cuentas · Catálogo</text>
+      <text x="180" y="262" text-anchor="middle" font-size="12">Manual & Circuitos</text>
+      <!-- 2 -->
+      <circle cx="460" cy="180" r="12" fill="url(#g1)" filter="url(#sh)"/>
+      <text x="460" y="120" text-anchor="middle" font-size="16" font-weight="700">Fase 2</text>
+      <text x="460" y="140" text-anchor="middle" font-size="13" fill="#6e6e73">Operación</text>
+      <rect x="390" y="200" width="140" height="90" rx="12" fill="#fff" stroke="#e5e5ea" filter="url(#sh)"/>
+      <text x="460" y="226" text-anchor="middle" font-size="12">OC/OV · Registros</text>
+      <text x="460" y="244" text-anchor="middle" font-size="12">Conciliaciones</text>
+      <text x="460" y="262" text-anchor="middle" font-size="12">Incidente 1</text>
+      <!-- 3 -->
+      <circle cx="740" cy="180" r="12" fill="url(#g1)" filter="url(#sh)"/>
+      <text x="740" y="120" text-anchor="middle" font-size="16" font-weight="700">Fase 3</text>
+      <text x="740" y="140" text-anchor="middle" font-size="13" fill="#6e6e73">Escalamiento</text>
+      <rect x="670" y="200" width="140" height="90" rx="12" fill="#fff" stroke="#e5e5ea" filter="url(#sh)"/>
+      <text x="740" y="226" text-anchor="middle" font-size="12">Segmentos · Promos</text>
+      <text x="740" y="244" text-anchor="middle" font-size="12">KPIs & Tableros</text>
+      <text x="740" y="262" text-anchor="middle" font-size="12">Incidentes 2–3</text>
+      <!-- 4 -->
+      <circle cx="1020" cy="180" r="12" fill="url(#g1)" filter="url(#sh)"/>
+      <text x="1020" y="120" text-anchor="middle" font-size="16" font-weight="700">Fase 4</text>
+      <text x="1020" y="140" text-anchor="middle" font-size="13" fill="#6e6e73">Cierre</text>
+      <rect x="950" y="200" width="140" height="90" rx="12" fill="#fff" stroke="#e5e5ea" filter="url(#sh)"/>
+      <text x="1020" y="226" text-anchor="middle" font-size="12">Auditoría</text>
+      <text x="1020" y="244" text-anchor="middle" font-size="12">Informe & Defensa</text>
+      <text x="1020" y="262" text-anchor="middle" font-size="12">Peer‑review</text>
+      <!-- KPI band -->
+      <rect x="60" y="38" width="1080" height="50" rx="12" fill="#ffffff" stroke="#e5e5ea" filter="url(#sh)"/>
+      <text x="90" y="68" font-size="12">KPIs: Conversión sim., Margen, Fill‑rate, Rotación, NPS sim., Cumplimiento SLA</text>
+    </svg>
+  </section>
+
+  <!-- Synoptic tree -->
+  <section aria-labelledby="sinopsis" class="grid synopsis" style="margin-top:18px">
+    <h2 id="sinopsis">Cuadro sinóptico</h2>
+    <details open>
+      <summary>1. Propósito y alineación</summary>
+      <div class="panel">
+        <p class="muted">Integrar planificación–operación–evaluación con empresas simuladas y Central Académica; desarrollar competencias técnicas y blandas.</p>
+      </div>
+    </details>
+    <details>
+      <summary>2. Arquitectura del dispositivo</summary>
+      <div class="panel">
+        <p><span class="chip">3–4 empresas</span> · <span class="chip">Áreas clave</span> · <span class="chip">Roles rotativos</span> · <span class="chip">Central (Banco/Comercial/Logística)</span></p>
+      </div>
+    </details>
+    <details>
+      <summary>3. Metodología y flujo</summary>
+      <div class="panel">
+        <p>ABP + incidentes críticos; documentación auténtica; analítica y retroalimentación por hitos.</p>
+      </div>
+    </details>
+    <details>
+      <summary>4. Cronograma y entregables</summary>
+      <div class="panel">
+        <p>Fase 1–4 con entregables verificables (manuales, registros, conciliaciones, informes, defensa).</p>
+      </div>
+    </details>
+    <details>
+      <summary>5. Evaluación y evidencias</summary>
+      <div class="panel">
+        <p>Rúbricas, checklist, bitácora, extractos; matriz de 100 puntos con cinco dimensiones.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- Downloads -->
+  <section aria-labelledby="descargas" style="margin-top:20px">
+    <h2 id="descargas">Materiales descargables</h2>
+    <div class="cards" role="list">
+      <article class="card" role="listitem">
+        <h3>Propuesta para Dirección (Markdown)</h3>
+        <p class="muted">Síntesis ejecutiva editable.</p>
+        <p style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn primary" href="materials/propuesta-proyecto-final.md" download>⬇️ MD</a>
+          <a class="btn" href="materials/propuesta-proyecto-final.docx" download>DOCX</a>
+          <a class="btn" href="materials/propuesta-proyecto-final.pdf" download>PDF</a>
+        </p>
+      </article>
+      <article class="card" role="listitem">
+        <h3>Central de Simulación</h3>
+        <p class="muted">Guía bancaria/comercial</p>
+        <p><a class="btn" href="materials/central-de-simulacion.pdf" download>Descargar PDF</a></p>
+      </article>
+      <article class="card" role="listitem">
+        <h3>Empresa Simulada</h3>
+        <p class="muted">Manual de operación</p>
+        <p><a class="btn" href="materials/empresa-simulada.pdf" download>Descargar PDF</a></p>
+      </article>
+      <article class="card" role="listitem">
+        <h3>Red de Empresas Simuladas</h3>
+        <p class="muted">Diseño de red y casos</p>
+        <p><a class="btn" href="materials/red-de-empresas-simuladas.pdf" download>Descargar PDF</a></p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  © <span id="y"></span> Tecnicatura Universitaria en Comercio Electrónico y Marketing Digital · Proyecto Final — Empresas Simuladas
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  document.querySelectorAll('summary').forEach(s=>{
+    s.addEventListener('keydown',e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();s.click();}})
+  })
+</script>
+</body>
+</html>
